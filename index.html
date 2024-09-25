@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,10 @@
     <div id="beschrijving">
         <h1>Wedstrijdschema</h1>
         <h1>12 Teams</h1>
-    </div> -->
+    </div>
 
     <!-- Eerste schema voor het wedstrijdschema -->
-    <!-- <table>
+    <table>
         <tr>
             <td>
                 <select name="activiteiten" id="activiteiten">
@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td><textarea name="" id=""></textarea></td>
-            <td><button class="teamOne">1</button> vs <button class="teamTwo">2</button></td>
+            <td>1 vs 2</td>
             <td>3 vs 5</td>
             <td>4 vs 10</td>
             <td>7 vs 11</td>
@@ -85,13 +85,14 @@
             <td>1 vs 4</td>
         </tr>
     </table>
-<br><br><br><br> -->
+<br><br><br><br>
     <!-- Tweede schema voor de puntenstand -->
-    <!-- <div id="beschrijving">
+    <div id="beschrijving">
     <h2>Puntenstand</h2>
     <table>
+    <table class="punten-table">
         <!-- Voeg hier de kolommen voor de teams en 7 rijen voor vakjes -->
-        <!-- <tr>
+        <tr>
             <th>Team</th>
             <th>Ronde 1</th>
             <th>Ronde 2</th>
@@ -101,18 +102,18 @@
             <th>Ronde 6</th>
             <th>Finales</th>
             <th>Totaal</th>
-        </tr> -->
+        </tr>
         <!-- Teams en hun punten per ronde -->
-<!-- <tr>
+        <tr>
             <td>Team 1</td>
-            <td class="punten-vakje teamOneScore"></td>
             <td class="punten-vakje"></td>
             <td class="punten-vakje"></td>
             <td class="punten-vakje"></td>
             <td class="punten-vakje"></td>
             <td class="punten-vakje"></td>
             <td class="punten-vakje"></td>
-            <td class="punten-vakje teamOneTotal"></td>
+            <td class="punten-vakje"></td>
+            <td class="punten-vakje"></td>
         </tr>
         <tr>
             <td>Team 2</td>
@@ -240,178 +241,7 @@
     </table>
 </div>
 
-    
-    <script src="main.js"></script>
-</body>
-</html> -->
 
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toernooischema</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            color: #4B0082; /* Donkerpaars */
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #FF7F50; /* Koraaloranje */
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #FF6347; /* Tomaat */
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #ffe4e1; /* MistyRose */
-        }
-
-        tr:hover {
-            background-color: #FFD700; /* Goud */
-        }
-
-        button {
-            background-color: #FF4500; /* Oranje */
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #FF6347; /* Lichtere oranje bij hover */
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Toernooischema</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Ronde</th>
-                <th>Wedstrijd</th>
-                <th>Actie</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 1 vs Team 2</td>
-                <td><button onclick="addPoints('team1')">Team 1 wint</button> <button onclick="addPoints('team2')">Team 2 wint</button></td>
-            </tr>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 3 vs Team 4</td>
-                <td><button onclick="addPoints('team3')">Team 3 wint</button> <button onclick="addPoints('team4')">Team 4 wint</button></td>
-            </tr>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 5 vs Team 6</td>
-                <td><button onclick="addPoints('team5')">Team 5 wint</button> <button onclick="addPoints('team6')">Team 6 wint</button></td>
-            </tr>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 7 vs Team 8</td>
-                <td><button onclick="addPoints('team7')">Team 7 wint</button> <button onclick="addPoints('team8')">Team 8 wint</button></td>
-            </tr>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 9 vs Team 10</td>
-                <td><button onclick="addPoints('team9')">Team 9 wint</button> <button onclick="addPoints('team10')">Team 10 wint</button></td>
-            </tr>
-            <tr>
-                <td>Ronde 1</td>
-                <td>Team 11 vs Team 12</td>
-                <td><button onclick="addPoints('team11')">Team 11 wint</button> <button onclick="addPoints('team12')">Team 12 wint</button></td>
-            </tr>
-            <!-- Voeg hier extra rijen toe voor de volgende rondes -->
-        </tbody>
-    </table>
-
-    <h2>Puntenstand</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Team</th>
-                <th>Punten</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Team 1</td>
-                <td id="team1-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 2</td>
-                <td id="team2-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 3</td>
-                <td id="team3-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 4</td>
-                <td id="team4-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 5</td>
-                <td id="team5-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 6</td>
-                <td id="team6-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 7</td>
-                <td id="team7-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 8</td>
-                <td id="team8-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 9</td>
-                <td id="team9-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 10</td>
-                <td id="team10-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 11</td>
-                <td id="team11-points">0</td>
-            </tr>
-            <tr>
-                <td>Team 12</td>
-                <td id="team12-points">0</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <script src="main.js"></script>
 
 </body>
 </html>
-

@@ -46,6 +46,18 @@ th {
     color: #fff;
 }
 
+td::before, th::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 4px solid transparent;
+    border-image: linear-gradient(45deg, #ff9d00, #9795f0) 1;
+    pointer-events: none; /* Zorgt ervoor dat de border niet de interactie met de cellen beïnvloedt */
+}
 
 textarea {
     resize: none;
@@ -55,6 +67,11 @@ textarea {
 }
 
 .punten-vakje {
+    width: 50px; /* Pas de breedte aan naar wens */
+    height: 30px; /* Pas de hoogte aan naar wens */
+    border: 1px solid black; /* Border van 2px dik */
+    text-align: center; /* Optioneel: om tekst in het midden te zetten */
+    vertical-align: middle; /* Zorgt ervoor dat de tekst mooi in het midden blijft */
     width: 45px;
     height: 30px;
     text-align: center;
@@ -63,7 +80,6 @@ textarea {
     border-image: linear-gradient(to right, orange, purple) 1; /* Gradient voor de border */
     box-sizing: border-box; /* Zorg ervoor dat de border binnen de grootte van de vakjes blijft */
 }
-
 
 /* Media Queries voor responsiviteit */
 
