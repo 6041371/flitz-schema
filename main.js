@@ -42,6 +42,7 @@
 
 
 
+
 console.log('loaded');
 
 let teamscores = window.localStorage.getItem('teamScore');
