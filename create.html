@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Room</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Voorkom standaard formulier actie
+
+            var selectedGroups = document.getElementById("groups").value;
+
+            // Controleer of het aantal groepen 12 is
+            if (selectedGroups == 12) {
+                window.location.href = "twaalf.php"; // Navigeer naar twaalf.html
+            } else {
+                document.getElementById("createForm").submit(); // Verstuur het formulier
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <form action="create.php" method="POST" class="form">
+        <form id="createForm" action="create.php" method="POST" onsubmit="handleFormSubmit(event)" class="form">
             <h2>Select Groups and Game Type</h2>
             
             <label for="groups">Select number of groups:</label>
@@ -22,8 +36,8 @@
 
             <label for="gameType">Select game type:</label>
             <select name="gameType" id="gameType" required>
-                <option value="Robinson">Robinson</option>
-                <option value="zeskamp">Zeskamp</option>
+                <option value="Robinson Zeskamp">Robinson</option>
+                <option value="Zeskamp">Zeskamp</option>
                 <option value="Oud-Hollandse Spellen">Oud-Hollandse Spellen</option>
             </select>
 
