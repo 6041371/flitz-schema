@@ -12,10 +12,29 @@
             var selectedGroups = document.getElementById("groups").value;
 
             // Controleer of het aantal groepen 12 is
-            if (selectedGroups == 12) {
-                window.location.href = "twaalf.php"; // Navigeer naar twaalf.html
+            if (selectedGroups == 4) {
+                window.location.href = "vier.php";
             } else {
-                document.getElementById("createForm").submit(); // Verstuur het formulier
+                document.getElementById("createForm").submit();
+            }
+
+            if (selectedGroups == 6) {
+                window.location.href = "zes.php";
+            } else {
+                document.getElementById("createForm").submit();
+            }
+
+
+            if (selectedGroups == 10) {
+                window.location.href = "tien.php";
+            } else {
+                document.getElementById("createForm").submit();
+            }
+
+            if (selectedGroups == 12) {
+                window.location.href = "twaalf.php"; 
+            } else {
+                document.getElementById("createForm").submit(); 
             }
         }
     </script>
@@ -29,7 +48,6 @@
             <select name="groups" id="groups" required>
                 <option value="4">4 Groups</option>
                 <option value="6">6 Groups</option>
-                <option value="8">8 Groups</option>
                 <option value="10">10 Groups</option>
                 <option value="12">12 Groups</option>
             </select>

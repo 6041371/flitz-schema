@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12 Teams Schema</title>
+    <title>10 Teams Schema</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* CSS styling */
@@ -117,7 +117,7 @@ td:nth-child(12), td:nth-child(13) {
 <body>
     <div id="beschrijving">
         <h1>Wedstrijdschema</h1>
-        <h2>12 Teams</h2>
+        <h2>10 Teams</h2>
         <div class="info-container">
             <div class="gameType">
                 <p>Game: <?php echo $_SESSION['gameType']; ?></p>
@@ -137,100 +137,85 @@ td:nth-child(12), td:nth-child(13) {
             <th colspan="2">Ronde 3</th>
             <th colspan="2">Ronde 4</th>
             <th colspan="2">Ronde 5</th>
-            <th colspan="2">Ronde 6</th>
+            <th colspan="2">Finale</th>
         </tr>
         <tr>
             <td><input></td>
-            <td onclick="selectWinner(this, 1, 1)">1</td>
-            <td onclick="selectWinner(this, 2, 1)">2</td>
-            <td onclick="selectWinner(this, 3, 2)">3</td>
-            <td onclick="selectWinner(this, 5, 2)">5</td>
-            <td onclick="selectWinner(this, 4, 3)">4</td>
-            <td onclick="selectWinner(this, 10, 3)">10</td>
-            <td onclick="selectWinner(this, 7, 4)">7</td>
-            <td onclick="selectWinner(this, 11, 4)">11</td>
-            <td onclick="selectWinner(this, 12, 5)">12</td>
-            <td onclick="selectWinner(this, 6, 5)">6</td>
-            <td onclick="selectWinner(this, 9, 6)">9</td>
-            <td onclick="selectWinner(this, 8, 6)">8</td>
+            <td onclick="selectWinner(this, 7, 1)">1</td>
+            <td onclick="selectWinner(this, 8, 1)">2</td>
+            <td onclick="selectWinner(this, 4, 2)">9</td>
+            <td onclick="selectWinner(this, 6, 2)">4</td>
+            <td onclick="selectWinner(this, 9, 3)">7</td>
+            <td onclick="selectWinner(this, 12, 3)">6</td>
+            <td onclick="selectWinner(this, 1, 4)">5</td>
+            <td onclick="selectWinner(this, 5, 4)">8</td>
+            <td onclick="selectWinner(this, 3, 5)">3</td>
+            <td onclick="selectWinner(this, 10, 5)">10</td>
+            <td onclick="selectWinner"></td>
+            <td onclick="selectWinner"></td>
         </tr>
         <tr>
             <td><input></td>
-            <td onclick="selectWinner(this, 3, 1)">3</td>
-            <td onclick="selectWinner(this, 4, 1)">4</td>
-            <td onclick="selectWinner(this, 1, 2)">1</td>
-            <td onclick="selectWinner(this, 11, 2)">11</td>
-            <td onclick="selectWinner(this, 2, 3)">2</td>
-            <td onclick="selectWinner(this, 8, 3)">8</td>
-            <td onclick="selectWinner(this, 6, 4)">6</td>
-            <td onclick="selectWinner(this, 10, 4)">10</td>
-            <td onclick="selectWinner(this, 9, 5)">9</td>
-            <td onclick="selectWinner(this, 7, 5)">7</td>
-            <td onclick="selectWinner(this, 12, 6)">12</td>
-            <td onclick="selectWinner(this, 5, 6)">5</td>
+            <td onclick="selectWinner(this, 7, 1)">3</td>
+            <td onclick="selectWinner(this, 8, 1)">4</td>
+            <td onclick="selectWinner(this, 4, 2)">1</td>
+            <td onclick="selectWinner(this, 6, 2)">6</td>
+            <td onclick="selectWinner(this, 9, 3)">9</td>
+            <td onclick="selectWinner(this, 12, 3)">8</td>
+            <td onclick="selectWinner(this, 1, 4)">7</td>
+            <td onclick="selectWinner(this, 5, 4)">10</td>
+            <td onclick="selectWinner(this, 3, 5)">5</td>
+            <td onclick="selectWinner(this, 10, 5)">2</td>
+            <td onclick="selectWinner"></td>
+            <td onclick="selectWinner"></td>
         </tr>
         <tr>
             <td><input></td>
-            <td onclick="selectWinner(this, 5, 1)">5</td>
-            <td onclick="selectWinner(this, 6, 1)">6</td>
-            <td onclick="selectWinner(this, 2, 2)">2</td>
-            <td onclick="selectWinner(this, 9, 2)">9</td>
-            <td onclick="selectWinner(this, 1, 3)">1</td>
-            <td onclick="selectWinner(this, 3, 3)">3</td>
-            <td onclick="selectWinner(this, 8, 4)">8</td>
-            <td onclick="selectWinner(this, 12, 4)">12</td>
-            <td onclick="selectWinner(this, 4, 5)">4</td>
-            <td onclick="selectWinner(this, 11, 5)">11</td>
-            <td onclick="selectWinner(this, 10, 6)">10</td>
-            <td onclick="selectWinner(this, 7, 6)">7</td>
+            <td onclick="selectWinner(this, 7, 1)">5</td>
+            <td onclick="selectWinner(this, 8, 1)">6</td>
+            <td onclick="selectWinner(this, 4, 2)">3</td>
+            <td onclick="selectWinner(this, 6, 2)">8</td>
+            <td onclick="selectWinner(this, 9, 3)">1</td>
+            <td onclick="selectWinner(this, 12, 3)">10</td>
+            <td onclick="selectWinner(this, 1, 4)">9</td>
+            <td onclick="selectWinner(this, 5, 4)">2</td>
+            <td onclick="selectWinner(this, 3, 5)">7</td>
+            <td onclick="selectWinner(this, 10, 5)">4</td>
+            <td onclick="selectWinner"></td>
+            <td onclick="selectWinner"></td>
         </tr>
         <tr>
             <td><input></td>
             <td onclick="selectWinner(this, 7, 1)">7</td>
             <td onclick="selectWinner(this, 8, 1)">8</td>
-            <td onclick="selectWinner(this, 4, 2)">4</td>
-            <td onclick="selectWinner(this, 6, 2)">6</td>
-            <td onclick="selectWinner(this, 9, 3)">9</td>
-            <td onclick="selectWinner(this, 12, 3)">12</td>
+            <td onclick="selectWinner(this, 4, 2)">5</td>
+            <td onclick="selectWinner(this, 6, 2)">10</td>
+            <td onclick="selectWinner(this, 9, 3)">3</td>
+            <td onclick="selectWinner(this, 12, 3)">2</td>
             <td onclick="selectWinner(this, 1, 4)">1</td>
-            <td onclick="selectWinner(this, 5, 4)">5</td>
-            <td onclick="selectWinner(this, 3, 5)">3</td>
-            <td onclick="selectWinner(this, 10, 5)">10</td>
-            <td onclick="selectWinner(this, 2, 6)">2</td>
-            <td onclick="selectWinner(this, 11, 6)">11</td>
+            <td onclick="selectWinner(this, 5, 4)">4</td>
+            <td onclick="selectWinner(this, 3, 5)">9</td>
+            <td onclick="selectWinner(this, 10, 5)">6</td>
+            <td onclick="selectWinner"></td>
+            <td onclick="selectWinner"></td>
         </tr>
         <tr>
             <td><input></td>
-            <td onclick="selectWinner(this, 9, 1)">9</td>
-            <td onclick="selectWinner(this, 10, 1)">10</td>
-            <td onclick="selectWinner(this, 7, 2)">7</td>
-            <td onclick="selectWinner(this, 12, 2)">12</td>
-            <td onclick="selectWinner(this, 11, 3)">11</td>
-            <td onclick="selectWinner(this, 5, 3)">5</td>
-            <td onclick="selectWinner(this, 2, 4)">2</td>
-            <td onclick="selectWinner(this, 4, 4)">4</td>
-            <td onclick="selectWinner(this, 1, 5)">1</td>
-            <td onclick="selectWinner(this, 8, 5)">8</td>
-            <td onclick="selectWinner(this, 3, 6)">3</td>
-            <td onclick="selectWinner(this, 6, 6)">6</td>
-        </tr>
-        <tr>
-            <td><input></td>
-            <td onclick="selectWinner(this, 11, 1)">11</td>
-            <td onclick="selectWinner(this, 12, 1)">12</td>
-            <td onclick="selectWinner(this, 8, 2)">8</td>
-            <td onclick="selectWinner(this, 10, 2)">10</td>
-            <td onclick="selectWinner(this, 6, 3)">6</td>
-            <td onclick="selectWinner(this, 7, 3)">7</td>
-            <td onclick="selectWinner(this, 3, 4)">3</td>
-            <td onclick="selectWinner(this, 9, 4)">9</td>
-            <td onclick="selectWinner(this, 2, 5)">2</td>
-            <td onclick="selectWinner(this, 5, 5)">5</td>
-            <td onclick="selectWinner(this, 1, 6)">1</td>
-            <td onclick="selectWinner(this, 4, 6)">4</td>
+            <td onclick="selectWinner(this, 7, 1)">9</td>
+            <td onclick="selectWinner(this, 8, 1)">10</td>
+            <td onclick="selectWinner(this, 4, 2)">7</td>
+            <td onclick="selectWinner(this, 6, 2)">2</td>
+            <td onclick="selectWinner(this, 9, 3)">5</td>
+            <td onclick="selectWinner(this, 12, 3)">4</td>
+            <td onclick="selectWinner(this, 1, 4)">3</td>
+            <td onclick="selectWinner(this, 5, 4)">6</td>
+            <td onclick="selectWinner(this, 3, 5)">1</td>
+            <td onclick="selectWinner(this, 10, 5)">8</td>
+            <td onclick="selectWinner"></td>
+            <td onclick="selectWinner"></td>
         </tr>
     </table>
- 
+
     <!-- Puntenstand -->
     <div id="beschrijving">
         <h2>Puntenstand</h2>
