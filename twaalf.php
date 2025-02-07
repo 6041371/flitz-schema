@@ -260,21 +260,52 @@ td:nth-child(12), td:nth-child(13) {
             <tr id="team12"><td>Team 12</td><td class="punten-vakje"></td><td class="punten-vakje"></td><td class="punten-vakje"></td><td class="punten-vakje"></td><td class="punten-vakje"></td><td class="punten-vakje"></td><td class="punten-vakje"></td></tr>
         </table>
     </div>
- 
-    <script>
-        function selectWinner(cell, team, round) {
-            // Markeer als geselecteerd en voorkom extra klikken
-            cell.classList.add('selected');
- 
-            // Zoek het puntenveld en het totaalveld voor het winnende team
-            let teamRow = document.getElementById('team' + team);
-            let puntenCell = teamRow.getElementsByClassName('punten-vakje')[round - 1];
-            let totaalCell = teamRow.lastElementChild;
- 
-            // Update punten
-            puntenCell.textContent = (parseInt(puntenCell.textContent) || 0) + 3;
-            totaalCell.textContent = (parseInt(totaalCell.textContent) || 0) + 3;
-        }
-    </script>
+
+
+   
+   <script>
+   function selectWinner(cell, team, round) {
+    // Zoek de rij waartoe de geselecteerde cel behoort
+    let row = cell.closest('tr');
+
+    // Zoek alle cellen die al geselecteerd zijn voor deze lijn (horizontale lijn)
+    let selectedCells = row.querySelectorAll('td.selected[data-round="' + round + '"]');
+
+    // Als er al een selectie is, maak deze dan ongedaan door de scores te resetten
+    if (selectedCells.length > 0) {
+        // Verwijder de 'selected' class en reset het ronde-attribuut
+        selectedCells.forEach(selectedCell => {
+            selectedCell.classList.remove('selected');
+            selectedCell.removeAttribute('data-round');
+        });
+
+        // Zoek het team en het puntensysteem voor de vorige winnaar
+        let prevTeam = selectedCells[0].getAttribute('data-team');
+        let prevTeamRow = document.getElementById('team' + prevTeam);
+        let prevPuntenCell = prevTeamRow.getElementsByClassName('punten-vakje')[round - 1];
+        let prevTotaalCell = prevTeamRow.lastElementChild;
+
+        // Verlaag de punten van het vorige team
+        prevPuntenCell.textContent = (parseInt(prevPuntenCell.textContent) || 0) - 3;
+        prevTotaalCell.textContent = (parseInt(prevTotaalCell.textContent) || 0) - 3;
+    }
+
+    // Markeer de nieuwe geselecteerde cel en voorkom extra klikken
+    cell.classList.add('selected');
+    cell.setAttribute('data-round', round);
+    cell.setAttribute('data-team', team); // Opslaan welk team geselecteerd is
+
+    // Zoek het puntenveld en het totaalveld voor het winnende team
+    let teamRow = document.getElementById('team' + team);
+    let puntenCell = teamRow.getElementsByClassName('punten-vakje')[round - 1];
+    let totaalCell = teamRow.lastElementChild;
+
+    // Update punten voor het nieuwe geselecteerde team
+    puntenCell.textContent = (parseInt(puntenCell.textContent) || 0) + 3;
+    totaalCell.textContent = (parseInt(totaalCell.textContent) || 0) + 3;
+}
+
+
+</script>
 </body>
 </html>
