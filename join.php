@@ -1,13 +1,19 @@
 <?php
-session_start();
+session_start(); // Start de sessie
 
+// Debugging: Bekijk of sessie-variabelen zijn ingesteld
+if (!isset($_SESSION['roomCode'], $_SESSION['gameType'], $_SESSION['groups'])) {
+    die("Session variables not set. Make sure the room is created first.");
+}
+
+// Controleer of het een POST-verzoek is
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Haal de room code op uit het formulier
-    $enteredCode = strtoupper($_POST['roomCode']);
+    // Haal de room code op en zet hem in hoofdletters
+    $enteredCode = strtoupper(trim($_POST['roomCode']));
 
-    // Controleer of de room code overeenkomt met de opgeslagen sessiecode
-    if (isset($_SESSION['roomCode']) && $_SESSION['roomCode'] === $enteredCode) {
-        // Als de code klopt, toon een bevestigingsbericht of redirect naar de room pagina
+    // Controleer of de ingevulde code overeenkomt met de sessiecode
+    if ($_SESSION['roomCode'] === $enteredCode) {
+        // Room code is correct, toon succespagina
         echo "<!DOCTYPE html>
         <html lang='en'>
         <head>
@@ -22,13 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p>You have successfully joined the room with code: <strong>$enteredCode</strong></p>
                 <p>Game Type: <strong>{$_SESSION['gameType']}</strong></p>
                 <p>Number of Groups: <strong>{$_SESSION['groups']}</strong></p>
-                <!-- Voeg hier verdere room details of opties toe -->
                 <a href='index.html' class='btn'>Go to Index</a>
             </div>
         </body>
         </html>";
     } else {
-        // Als de code niet klopt, geef een foutmelding
+        // Foute code ingevoerd
         echo "<!DOCTYPE html>
         <html lang='en'>
         <head>
@@ -47,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </html>";
     }
 } else {
-    // Als de pagina direct benaderd wordt zonder formulier
-    header("Location: join.html");
+    // Als de pagina direct wordt bezocht zonder formulier
+    header("Location: join.php");
     exit();
 }
 ?>
