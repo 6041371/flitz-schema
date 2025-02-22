@@ -117,7 +117,7 @@ td:nth-child(12), td:nth-child(13) {
 <body>
     <div id="beschrijving">
         <h1>Wedstrijdschema</h1>
-        <h2>10 Teams</h2>
+        <h2>Volleybal 10 teams</h2>
         <div class="info-container">
             <div class="gameType">
                 <p>Game: <?php echo $_SESSION['gameType']; ?></p>
@@ -137,10 +137,9 @@ td:nth-child(12), td:nth-child(13) {
             <th colspan="2">Ronde 3</th>
             <th colspan="2">Ronde 4</th>
             <th colspan="2">Ronde 5</th>
-            <th colspan="2">Finale</th>
         </tr>
         <tr>
-            <td><input></td>
+            <td><p>Veld 1</p></td>
             <td onclick="selectWinner(this, 1, 1)">1</td>
             <td onclick="selectWinner(this, 2, 1)">2</td>
             <td onclick="selectWinner(this, 9, 2)">9</td>
@@ -151,11 +150,9 @@ td:nth-child(12), td:nth-child(13) {
             <td onclick="selectWinner(this, 8, 4)">8</td>
             <td onclick="selectWinner(this, 3, 5)">3</td>
             <td onclick="selectWinner(this, 10, 5)">10</td>
-            <td onclick="selectWinner"></td>
-            <td onclick="selectWinner"></td>
         </tr>
         <tr>
-            <td><input></td>
+            <td><p>Veld 2</p></td>
             <td onclick="selectWinner(this, 3, 1)">3</td>
             <td onclick="selectWinner(this, 4, 1)">4</td>
             <td onclick="selectWinner(this, 1, 2)">1</td>
@@ -166,11 +163,9 @@ td:nth-child(12), td:nth-child(13) {
             <td onclick="selectWinner(this, 10, 4)">10</td>
             <td onclick="selectWinner(this, 5, 5)">5</td>
             <td onclick="selectWinner(this, 2, 5)">2</td>
-            <td onclick="selectWinner"></td>
-            <td onclick="selectWinner"></td>
         </tr>
         <tr>
-            <td><input></td>
+            <td><p>Veld 3</p></td>
             <td onclick="selectWinner(this, 5, 1)">5</td>
             <td onclick="selectWinner(this, 6, 1)">6</td>
             <td onclick="selectWinner(this, 3, 2)">3</td>
@@ -181,11 +176,9 @@ td:nth-child(12), td:nth-child(13) {
             <td onclick="selectWinner(this, 2, 4)">2</td>
             <td onclick="selectWinner(this, 7, 5)">7</td>
             <td onclick="selectWinner(this, 4, 5)">4</td>
-            <td onclick="selectWinner"></td>
-            <td onclick="selectWinner"></td>
         </tr>
         <tr>
-            <td><input></td>
+            <td><p>Veld 4</p></td>
             <td onclick="selectWinner(this, 7, 1)">7</td>
             <td onclick="selectWinner(this, 8, 1)">8</td>
             <td onclick="selectWinner(this, 5, 2)">5</td>
@@ -196,23 +189,19 @@ td:nth-child(12), td:nth-child(13) {
             <td onclick="selectWinner(this, 4, 4)">4</td>
             <td onclick="selectWinner(this, 9, 5)">9</td>
             <td onclick="selectWinner(this, 6, 5)">6</td>
-            <td onclick="selectWinner"></td>
-            <td onclick="selectWinner"></td>
         </tr>
         <tr>
-            <td><input></td>
-            <td onclick="selectWinner(this, 9, 1)">9</td>
-            <td onclick="selectWinner(this, 10, 1)">10</td>
-            <td onclick="selectWinner(this, 7, 2)">7</td>
-            <td onclick="selectWinner(this, 2, 2)">2</td>
-            <td onclick="selectWinner(this, 5, 3)">5</td>
-            <td onclick="selectWinner(this, 4, 3)">4</td>
-            <td onclick="selectWinner(this, 3, 4)">3</td>
-            <td onclick="selectWinner(this, 6, 4)">6</td>
-            <td onclick="selectWinner(this, 1, 5)">1</td>
-            <td onclick="selectWinner(this, 8, 5)">8</td>
-            <td onclick="selectWinner"></td>
-            <td onclick="selectWinner"></td>
+            <td><p>Pauze</p></td>
+            <td>9</td>
+            <td>10</td>
+            <td>7</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>1</td>
+            <td>8</td>
         </tr>
     </table>
 
